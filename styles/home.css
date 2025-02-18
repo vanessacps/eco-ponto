@@ -2,8 +2,8 @@
 #page-home {
     height: 100vh;
 
-    background: url(https://picsum.photos/878/660) no-repeat;
-    background-position: 35vw bottom;
+    background: url(../assets/ecoponto_logo.png) no-repeat;
+    background-position: 60vw bottom;
 }
 
 #page-home .content {
