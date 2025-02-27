@@ -105,7 +105,7 @@ main .card p {
 
 
 button {
-    width: 260px;
+    width: 120px;
     height: 56px;
 
     background-color: #32f98f;
@@ -124,4 +124,9 @@ button {
 
 button:hover{
     background-color: #2fb86e;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-around;
 }

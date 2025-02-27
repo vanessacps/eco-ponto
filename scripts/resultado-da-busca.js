@@ -17,7 +17,10 @@ function listaConsulta () {
             <h1>${ponto.name}</h1>
             <h3>${ponto.items}</h3>
             <p>${ponto.address}</p>
-            <button class="remove-btn" data-id="${ponto.id}">Remover</button>
+            <div class="btn-group">
+                <button id="edit" class="edit-btn" data-id="${ponto.id}">Editar</button>
+                <button class="remove-btn" data-id="${ponto.id}">Remover</button>
+            </div>
         `;
         
         cardsContainer.appendChild(card);
@@ -37,3 +40,13 @@ listaConsulta()
         window.location.reload() // atualiza a lista de pontos após a remoção
      });
  });
+
+  // Adiciona funcionalidade para remover pontos
+  const editButtons = document.querySelectorAll('.edit-btn');
+  editButtons.forEach((button, posicao) => {
+      button.addEventListener('click', function() {
+         const id = this.getAttribute('data-id')
+         console.log(id)
+         window.location.replace(`/criar-ponto.html?id=${id}`)
+      });
+  });
